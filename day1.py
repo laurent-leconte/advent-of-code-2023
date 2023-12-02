@@ -1,12 +1,4 @@
-from urllib.request import urlopen
-
-def get_input(day: int, split_line=True) -> str:
-    with open(f"inputs/day{day}", "r") as f:
-        content = f.read()
-        if split_line:
-            return content.splitlines()
-        else:
-            return content
+from utils import get_input
 
 def digits_in_string(string: str, written=False) -> int:
     res = []
