@@ -16,7 +16,7 @@ CARD_STENGTH = "23456789TJQKA"
 CARD_STENGTH_PART_2 = "J23456789TQKA"
 
 
-def hand_to_int(hand: str, part2=False):
+def hand_to_int(hand: str, part2=False) -> int:
     """
     Encode a hand as an integer, so that it can be compared to other hands
     """
