@@ -123,7 +123,7 @@ def day10():
     start_row = map[start[0]]
     j = start[1]
     map[start[0]] = start_row[:j] + replace_start(map, start).value + start_row[j+1:]
-    # clean up map
+    # clean up map: replace unused pipes with spaces
     for i, row in enumerate(map):
         new_row = []
         for j, char in enumerate(row):
