@@ -24,3 +24,11 @@ def split_by_empty_line(input: list[str]) -> list[list[str]]:
     if acc:
         res.append(acc)
     return res
+
+
+def transpose(lines: list[str]):
+    rows = [''] * len(lines[0])
+    for line in lines:
+        for i, c in enumerate(line):
+            rows[i] += c
+    return rows
