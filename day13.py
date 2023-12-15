@@ -1,4 +1,4 @@
-from utils import get_input, split_by_empty_line
+from utils import get_input, split_by_empty_line, transpose
 
 def is_symmetrical(lines, i):
     first = reversed(lines[:i])
@@ -12,14 +12,6 @@ def count_diff(lines: list[str], i: int) -> int:
     def count_diff_line(l1, l2):
         return sum((c1 != c2 for c1, c2 in zip(l1, l2)))
     return sum((count_diff_line(l1, l2) for l1, l2 in zip(first, second)))
-
-
-def transpose(lines: list[str]):
-    rows = [''] * len(lines[0])
-    for line in lines:
-        for i, c in enumerate(line):
-            rows[i] += c
-    return rows
 
 
 def test_puzzle(puzzle: list[str], part2: bool) -> tuple[int, int]:
